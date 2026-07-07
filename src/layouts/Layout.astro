@@ -48,8 +48,12 @@ const finalJsonLd = jsonLd || defaultJsonLd;
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" href="/favicon.ico" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="ImgMold" />
+    <link rel="manifest" href="/site.webmanifest" />
     <meta name="generator" content={Astro.generator} />
     
     <!-- PWA & Mobile Optimization -->
@@ -185,15 +189,15 @@ const finalJsonLd = jsonLd || defaultJsonLd;
       <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8 items-center text-center md:text-left">
         <div>
           <p class="text-xs text-[#7a7a7a] dark:text-[#cccccc] leading-relaxed">
-            © {new Date().getFullYear()} IMGMOLD.COM. All rights reserved. 
+            © {new Date().getFullYear()} IMGMOLD.COM. {t(locale, 'footer.rights')}
             <br />
-            Our tool operates completely locally. Your photos and signature files are processed inside your browser cache and never hit our servers.
+            {t(locale, 'footer.localProcessing')}
           </p>
         </div>
         <div class="flex justify-center md:justify-end gap-5">
-          <a href="/privacy" class="text-xs text-[#7a7a7a] hover:text-[#1d1d1f] dark:text-[#cccccc] dark:hover:text-white transition-colors duration-200">Privacy Policy</a>
-          <a href="/terms" class="text-xs text-[#7a7a7a] hover:text-[#1d1d1f] dark:text-[#cccccc] dark:hover:text-white transition-colors duration-200">Terms of Use</a>
-          <a href="/contact" class="text-xs text-[#7a7a7a] hover:text-[#1d1d1f] dark:text-[#cccccc] dark:hover:text-white transition-colors duration-200">Contact Us</a>
+          <a href="/privacy" class="text-xs text-[#7a7a7a] hover:text-[#1d1d1f] dark:text-[#cccccc] dark:hover:text-white transition-colors duration-200">{t(locale, 'footer.privacyPolicy')}</a>
+          <a href="/terms" class="text-xs text-[#7a7a7a] hover:text-[#1d1d1f] dark:text-[#cccccc] dark:hover:text-white transition-colors duration-200">{t(locale, 'footer.termsOfUse')}</a>
+          <a href="/contact" class="text-xs text-[#7a7a7a] hover:text-[#1d1d1f] dark:text-[#cccccc] dark:hover:text-white transition-colors duration-200">{t(locale, 'footer.contactUs')}</a>
         </div>
       </div>
     </footer>

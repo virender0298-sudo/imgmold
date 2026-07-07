@@ -173,7 +173,12 @@ export interface ImageSetting {
   bannerText: string;
 }
 
-export default function ImageResizerWorkspace() {
+interface WorkspaceProps {
+  [key: string]: string;
+}
+
+export default function ImageResizerWorkspace(props: WorkspaceProps) {
+  const _ = (key: string, fallback: string) => props[key] || fallback;
   const [originalFiles, setOriginalFiles] = useState<File[]>([]);
   const [originalUrls, setOriginalUrls] = useState<string[]>([]);
   const [activeIndex, setActiveIndex] = useState(0);
@@ -450,15 +455,15 @@ export default function ImageResizerWorkspace() {
       {/* Header controls (Apple Minimalist style) */}
       <div className="flex justify-between items-center mb-10 border-b border-[#e0e0e0] dark:border-[#333333] pb-5">
         <div>
-          <span className="text-xs uppercase tracking-widest text-[#7a7a7a] dark:text-[#cccccc] font-semibold">Image Utility</span>
-          <h2 className="text-3xl font-bold tracking-tight text-[#1d1d1f] dark:text-white mt-1">Local Resizer Studio</h2>
+          <span className="text-xs uppercase tracking-widest text-[#7a7a7a] dark:text-[#cccccc] font-semibold">{_('workspace.utility', 'Image Utility')}</span>
+          <h2 className="text-3xl font-bold tracking-tight text-[#1d1d1f] dark:text-white mt-1">{_('workspace.studio', 'Local Resizer Studio')}</h2>
         </div>
         <div className="flex items-center gap-3">
           <button 
             onClick={toggleDarkMode}
             className="p-2.5 rounded-full bg-[#f5f5f7] dark:bg-[#272729] hover:bg-[#e0e0e0] dark:hover:bg-[#333333] transition-colors duration-200 text-[#1d1d1f] dark:text-white flex items-center justify-center cursor-pointer"
-            title="Toggle Dark Mode (D)"
-            aria-label="Toggle Dark Mode"
+            title={_('workspace.toggleDark', 'Toggle Dark Mode (D)')}
+            aria-label={_('workspace.toggleDark', 'Toggle Dark Mode (D)')}
           >
             {darkMode ? <Sun size={18} /> : <Moon size={18} />}
           </button>
@@ -501,20 +506,20 @@ export default function ImageResizerWorkspace() {
               </div>
               
               <h3 className="text-xl font-semibold text-[#1d1d1f] dark:text-white mb-2">
-                Drag and drop your photos or signatures
+                {_('workspace.dropTitle', 'Drag and drop your photos or signatures')}
               </h3>
               <p className="text-sm text-[#7a7a7a] dark:text-[#cccccc] max-w-md mb-8">
-                Works for JPG, PNG, and WebP. Select one or multiple images to batch process them directly in your browser. No data leaves your device.
+                {_('workspace.dropDesc', 'Works for JPG, PNG, and WebP. Select one or multiple images to batch process them directly in your browser. No data leaves your device.')}
               </p>
 
               <div className="flex flex-col sm:flex-row items-center gap-3">
                 <span className="px-5 py-2.5 rounded-full bg-[#0066cc] dark:bg-[#2997ff] text-white font-medium text-sm hover:opacity-90 shadow-sm transition-opacity">
-                  Browse Files
+                  {_('workspace.browseFiles', 'Browse Files')}
                 </span>
                 
                 <div className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20 text-xs font-semibold">
                   <ShieldCheck size={14} />
-                  Processed Locally: 100% Secure
+                  {_('workspace.processedLocally', 'Processed Locally: 100% Secure')}
                 </div>
               </div>
             </div>
@@ -536,12 +541,12 @@ export default function ImageResizerWorkspace() {
                 {/* Visual Header of Viewport */}
                 <div className="absolute top-4 left-6 right-6 flex justify-between items-center z-10">
                   <span className="text-xs font-semibold px-3 py-1 rounded-full bg-[#e0e0e0]/60 dark:bg-[#333333]/60 text-[#1d1d1f] dark:text-white backdrop-blur-sm">
-                    Live Canvas Viewport
+                    {_('workspace.liveViewport', 'Live Canvas Viewport')}
                   </span>
                   
                   {isProcessing && (
                     <span className="text-xs flex items-center gap-1 text-[#0066cc] dark:text-[#2997ff] font-medium bg-[#0066cc]/10 px-3 py-1 rounded-full animate-pulse">
-                      <RefreshCw size={12} className="animate-spin" /> Processing
+                      <RefreshCw size={12} className="animate-spin" /> {_('workspace.processing', 'Processing')}
                     </span>
                   )}
                 </div>
@@ -551,13 +556,13 @@ export default function ImageResizerWorkspace() {
                   {results[activeIndex] ? (
                     <img 
                       src={results[activeIndex]!.dataUrl} 
-                      alt="Processed result" 
+                      alt={_('workspace.processedResult', 'Processed result')} 
                       className="max-h-[380px] object-contain transition-all duration-300"
                     />
                   ) : originalUrls[activeIndex] ? (
                     <img 
                       src={originalUrls[activeIndex]} 
-                      alt="Original source" 
+                      alt={_('workspace.originalSource', 'Original source')} 
                       className="max-h-[380px] object-contain blur-sm"
                     />
                   ) : null}
@@ -572,7 +577,7 @@ export default function ImageResizerWorkspace() {
                           {/* Face outline */}
                           <path strokeLinecap="round" strokeLinejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                         </svg>
-                        <span className="text-[10px] text-[#0066cc]/60 dark:text-[#2997ff]/60 uppercase tracking-widest font-semibold mt-4">Align Head & Shoulders</span>
+                        <span className="text-[10px] text-[#0066cc]/60 dark:text-[#2997ff]/60 uppercase tracking-widest font-semibold mt-4">{_('workspace.alignHead', 'Align Head & Shoulders')}</span>
                       </div>
                     </div>
                   )}
@@ -581,7 +586,7 @@ export default function ImageResizerWorkspace() {
                     <div className="absolute inset-0 pointer-events-none flex items-center justify-center">
                       {/* Signature guides */}
                       <div className="w-[85%] h-[55%] border-2 border-dashed border-[#0066cc]/60 dark:border-[#2997ff]/60 rounded-md flex items-center justify-center">
-                        <span className="text-[10px] text-[#0066cc]/60 dark:text-[#2997ff]/60 uppercase tracking-widest font-semibold">Align Signature inside Box</span>
+                        <span className="text-[10px] text-[#0066cc]/60 dark:text-[#2997ff]/60 uppercase tracking-widest font-semibold">{_('workspace.alignSignature', 'Align Signature inside Box')}</span>
                       </div>
                     </div>
                   )}
@@ -590,7 +595,7 @@ export default function ImageResizerWorkspace() {
                     <div className="absolute inset-0 pointer-events-none flex items-center justify-center">
                       {/* Document frame border */}
                       <div className="w-[90%] h-[90%] border-2 border-dashed border-[#0066cc]/50 dark:border-[#2997ff]/50 rounded-sm">
-                        <div className="absolute bottom-2 left-2 text-[9px] text-[#0066cc]/60 dark:text-[#2997ff]/60 font-mono">DOCUMENT FRAME BOUNDS</div>
+                        <div className="absolute bottom-2 left-2 text-[9px] text-[#0066cc]/60 dark:text-[#2997ff]/60 font-mono">{_('workspace.docFrame', 'DOCUMENT FRAME BOUNDS')}</div>
                       </div>
                     </div>
                   )}
@@ -601,15 +606,15 @@ export default function ImageResizerWorkspace() {
                   <div className="w-full max-w-sm flex flex-col gap-4 mt-6">
                     <div className="grid grid-cols-3 gap-2 text-center">
                       <div className="bg-white dark:bg-[#272729] rounded-xl p-3 border border-[#e0e0e0]/60 dark:border-[#333333]/60 shadow-sm">
-                        <span className="text-[10px] uppercase text-[#7a7a7a] dark:text-[#cccccc] block">Width</span>
+                        <span className="text-[10px] uppercase text-[#7a7a7a] dark:text-[#cccccc] block">{_('workspace.width', 'Width')}</span>
                         <span className="font-semibold text-sm text-[#1d1d1f] dark:text-white">{results[activeIndex]!.width} px</span>
                       </div>
                       <div className="bg-white dark:bg-[#272729] rounded-xl p-3 border border-[#e0e0e0]/60 dark:border-[#333333]/60 shadow-sm">
-                        <span className="text-[10px] uppercase text-[#7a7a7a] dark:text-[#cccccc] block">Height</span>
+                        <span className="text-[10px] uppercase text-[#7a7a7a] dark:text-[#cccccc] block">{_('workspace.height', 'Height')}</span>
                         <span className="font-semibold text-sm text-[#1d1d1f] dark:text-white">{results[activeIndex]!.height} px</span>
                       </div>
                       <div className="bg-white dark:bg-[#272729] rounded-xl p-3 border border-[#e0e0e0]/60 dark:border-[#333333]/60 shadow-sm">
-                        <span className="text-[10px] uppercase text-[#7a7a7a] dark:text-[#cccccc] block">File Size</span>
+                        <span className="text-[10px] uppercase text-[#7a7a7a] dark:text-[#cccccc] block">{_('workspace.fileSize', 'File Size')}</span>
                         <span className={`font-semibold text-sm ${sizeOk ? 'text-emerald-600 dark:text-emerald-400' : 'text-rose-500 font-bold'}`}>
                           {results[activeIndex]!.sizeKb} KB
                         </span>
@@ -628,7 +633,7 @@ export default function ImageResizerWorkspace() {
                             }`}
                           >
                             {res ? (
-                              <img src={res.dataUrl} alt={`Thumbnail ${idx}`} className="w-full h-full object-cover" />
+                              <img src={res.dataUrl}                           alt={_('workspace.thumbnail', 'Thumbnail {index}').replace('{index}', String(idx))}  className="w-full h-full object-cover" />
                             ) : (
                               <div className="w-full h-full bg-gray-200 dark:bg-[#333333] animate-pulse" />
                             )}
@@ -645,7 +650,7 @@ export default function ImageResizerWorkspace() {
                 onClick={resetWorkspace}
                 className="w-full py-3.5 rounded-2xl bg-[#f5f5f7] hover:bg-[#e0e0e0]/80 dark:bg-[#272729] dark:hover:bg-[#333333] text-sm font-semibold transition-colors duration-200 cursor-pointer text-[#1d1d1f] dark:text-white flex items-center justify-center gap-2"
               >
-                Upload a Different Image
+                {_('workspace.uploadDifferent', 'Upload a Different Image')}
               </button>
             </div>
 
@@ -656,7 +661,7 @@ export default function ImageResizerWorkspace() {
               <div className="bg-white dark:bg-[#1a1a1c] border border-[#e0e0e0] dark:border-[#333333] rounded-3xl p-6 shadow-sm flex flex-col gap-6">
                 <div className="flex items-center gap-2">
                   <Sliders size={20} className="text-[#0066cc] dark:text-[#2997ff]" />
-                  <h3 className="text-lg font-bold text-[#1d1d1f] dark:text-white">Workspace Controls</h3>
+                  <h3 className="text-lg font-bold text-[#1d1d1f] dark:text-white">{_('workspace.controls', 'Workspace Controls')}</h3>
                 </div>
 
                 {activeSetting && (
@@ -664,7 +669,7 @@ export default function ImageResizerWorkspace() {
                     {/* Preset Dropdown */}
                     <div className="flex flex-col gap-2">
                       <label htmlFor="presetSelect" className="text-xs font-semibold text-[#7a7a7a] dark:text-[#cccccc] uppercase tracking-wider">
-                        Form Preset
+                        {_('workspace.formPreset', 'Form Preset')}
                       </label>
                       <div className="relative" ref={dropdownRef}>
                         <button
@@ -690,7 +695,7 @@ export default function ImageResizerWorkspace() {
                                   <Search size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-[#7a7a7a]" />
                                   <input
                                     type="text"
-                                    placeholder="Search presets..."
+                                      placeholder={_('workspace.searchPresets', 'Search presets...')}
                                     value={presetSearch}
                                     onChange={(e) => setPresetSearch(e.target.value)}
                                     onClick={(e) => e.stopPropagation()}
@@ -712,7 +717,7 @@ export default function ImageResizerWorkspace() {
                                     : 'text-[#1d1d1f] dark:text-white hover:bg-[#f5f5f7] dark:hover:bg-[#333333]'
                                 }`}
                               >
-                                Custom Dimensions
+                                {_('workspace.customDimensions', 'Custom Dimensions')}
                               </button>
                               
                               <div className="mt-1">
@@ -724,7 +729,7 @@ export default function ImageResizerWorkspace() {
                                   }}
                                   className="w-full flex items-center justify-between px-4 py-2 bg-gray-50 dark:bg-[#1a1a1c] text-xs font-bold text-[#7a7a7a] dark:text-[#cccccc] hover:bg-gray-100 dark:hover:bg-[#333333] transition-colors tracking-wider"
                                 >
-                                  <span>EXAM PRESETS</span>
+                                  <span>{_('workspace.examPresets', 'EXAM PRESETS')}</span>
                                   <ChevronRight size={14} className={`transition-transform duration-200 ${isExamGroupOpen ? 'rotate-90' : ''}`} />
                                 </button>
                                 
@@ -756,7 +761,7 @@ export default function ImageResizerWorkspace() {
                                         </button>
                                       ))}
                                       {PRESETS.filter(p => p.id !== 'custom' && !['us_visa', 'uk_visa', 'schengen_visa', 'gre_toefl'].includes(p.id) && p.name.toLowerCase().includes(presetSearch.toLowerCase())).length === 0 && (
-                                        <div className="px-4 py-3 text-xs text-[#7a7a7a] text-center italic">No matching exam presets found.</div>
+                                        <div className="px-4 py-3 text-xs text-[#7a7a7a] text-center italic">{_('workspace.noMatchExam', 'No matching exam presets found.')}</div>
                                       )}
                                     </motion.div>
                                   )}
@@ -772,7 +777,7 @@ export default function ImageResizerWorkspace() {
                                   }}
                                   className="w-full flex items-center justify-between px-4 py-2 bg-gray-50 dark:bg-[#1a1a1c] text-xs font-bold text-[#7a7a7a] dark:text-[#cccccc] hover:bg-gray-100 dark:hover:bg-[#333333] transition-colors tracking-wider border-t border-[#e0e0e0] dark:border-[#333333]"
                                 >
-                                  <span>INTERNATIONAL & VISA PRESETS</span>
+                                  <span>{_('workspace.visaPresets', 'INTERNATIONAL & VISA PRESETS')}</span>
                                   <ChevronRight size={14} className={`transition-transform duration-200 ${isVisaGroupOpen ? 'rotate-90' : ''}`} />
                                 </button>
                                 
@@ -804,7 +809,7 @@ export default function ImageResizerWorkspace() {
                                         </button>
                                       ))}
                                       {PRESETS.filter(p => ['us_visa', 'uk_visa', 'schengen_visa', 'gre_toefl'].includes(p.id) && p.name.toLowerCase().includes(presetSearch.toLowerCase())).length === 0 && (
-                                        <div className="px-4 py-3 text-xs text-[#7a7a7a] text-center italic">No matching visa presets found.</div>
+                                        <div className="px-4 py-3 text-xs text-[#7a7a7a] text-center italic">{_('workspace.noMatchVisa', 'No matching visa presets found.')}</div>
                                       )}
                                     </motion.div>
                                   )}
@@ -828,7 +833,7 @@ export default function ImageResizerWorkspace() {
                         className="grid grid-cols-3 gap-3"
                       >
                         <div className="flex flex-col gap-1.5">
-                          <label htmlFor="widthInput" className="text-[10px] font-semibold text-[#7a7a7a] uppercase tracking-wider">Width (px)</label>
+                          <label htmlFor="widthInput" className="text-[10px] font-semibold text-[#7a7a7a] uppercase tracking-wider">{_('workspace.wPx', 'Width (px)')}</label>
                           <input 
                             id="widthInput"
                             type="number"
@@ -838,7 +843,7 @@ export default function ImageResizerWorkspace() {
                           />
                         </div>
                         <div className="flex flex-col gap-1.5">
-                          <label htmlFor="heightInput" className="text-[10px] font-semibold text-[#7a7a7a] uppercase tracking-wider">Height (px)</label>
+                          <label htmlFor="heightInput" className="text-[10px] font-semibold text-[#7a7a7a] uppercase tracking-wider">{_('workspace.hPx', 'Height (px)')}</label>
                           <input 
                             id="heightInput"
                             type="number"
@@ -848,7 +853,7 @@ export default function ImageResizerWorkspace() {
                           />
                         </div>
                         <div className="flex flex-col gap-1.5">
-                          <label htmlFor="maxSizeInput" className="text-[10px] font-semibold text-[#7a7a7a] uppercase tracking-wider">Max Size (KB)</label>
+                          <label htmlFor="maxSizeInput" className="text-[10px] font-semibold text-[#7a7a7a] uppercase tracking-wider">{_('workspace.maxSizeKb', 'Max Size (KB)')}</label>
                           <input 
                             id="maxSizeInput"
                             type="number"
@@ -862,16 +867,16 @@ export default function ImageResizerWorkspace() {
 
                     {/* Filters configuration */}
                     <div className="border-t border-[#e0e0e0] dark:border-[#333333] pt-5 flex flex-col gap-4">
-                      <h4 className="text-xs font-semibold text-[#7a7a7a] dark:text-[#cccccc] uppercase tracking-wider">Filters & Enhancements</h4>
+                      <h4 className="text-xs font-semibold text-[#7a7a7a] dark:text-[#cccccc] uppercase tracking-wider">{_('workspace.filters', 'Filters & Enhancements')}</h4>
                       
                       {/* Signature Filter toggle */}
                       <div className="flex items-start justify-between gap-3">
                         <div>
                           <label htmlFor="sigFilterCheck" className="text-sm font-semibold text-[#1d1d1f] dark:text-white cursor-pointer select-none">
-                            Signature Scanner Clean
+                            {_('workspace.sigFilter', 'Signature Scanner Clean')}
                           </label>
                           <p className="text-xs text-[#7a7a7a] dark:text-[#cccccc] leading-relaxed mt-0.5">
-                            Strips yellow shadows and soft gray backdrops, producing professional flatbed contrast (Pure White & Black).
+                            {_('workspace.sigFilterDesc', 'Strips yellow shadows and soft gray backdrops, producing professional flatbed contrast (Pure White & Black).')}
                           </p>
                         </div>
                         <input 
@@ -888,10 +893,10 @@ export default function ImageResizerWorkspace() {
                         <div className="flex items-start justify-between gap-3">
                           <div>
                             <label htmlFor="burnTextCheck" className="text-sm font-semibold text-[#1d1d1f] dark:text-white cursor-pointer select-none">
-                              Burn Date / Name Banner
+                              {_('workspace.burnBanner', 'Burn Date / Name Banner')}
                             </label>
                             <p className="text-xs text-[#7a7a7a] dark:text-[#cccccc] leading-relaxed mt-0.5">
-                              Overlay a compliant white banner at the bottom containing names, dates, or other mandatory labels.
+                              {_('workspace.burnBannerDesc', 'Overlay a compliant white banner at the bottom containing names, dates, or other mandatory labels.')}
                             </p>
                           </div>
                           <input 
@@ -911,12 +916,12 @@ export default function ImageResizerWorkspace() {
                           >
                             <input 
                               type="text"
-                              placeholder="e.g. AMIT KUMAR 07/07/2026"
+                              placeholder={_('workspace.bannerPlaceholder', 'e.g. AMIT KUMAR 07/07/2026')}
                               value={activeSetting.bannerText}
                               onChange={(e) => updateActiveSetting({ bannerText: e.target.value })}
                               className="px-4 py-2.5 bg-[#f5f5f7] dark:bg-[#272729] text-sm text-[#1d1d1f] dark:text-white rounded-xl border-none focus:ring-1 focus:ring-[#0066cc] outline-none font-medium"
                             />
-                            <span className="text-[10px] text-[#7a7a7a]">Required for official UPSC/SSC applications.</span>
+                            <span className="text-[10px] text-[#7a7a7a]">{_('workspace.bannerRequired', 'Required for official UPSC/SSC applications.')}</span>
                           </motion.div>
                         )}
                       </div>
@@ -926,7 +931,7 @@ export default function ImageResizerWorkspace() {
 
                 {/* Pre-flight Compliance Checklist */}
                 <div className="border-t border-[#e0e0e0] dark:border-[#333333] pt-5">
-                  <h4 className="text-xs font-semibold text-[#7a7a7a] dark:text-[#cccccc] uppercase tracking-wider mb-3">Pre-flight Checklist</h4>
+                  <h4 className="text-xs font-semibold text-[#7a7a7a] dark:text-[#cccccc] uppercase tracking-wider mb-3">{_('workspace.preflight', 'Pre-flight Checklist')}</h4>
                   
                   <div className="flex flex-col gap-2.5">
                     {/* Size budget rule */}
@@ -937,7 +942,7 @@ export default function ImageResizerWorkspace() {
                         <AlertCircle size={16} className="text-rose-500 shrink-0 animate-bounce" />
                       )}
                       <span className={sizeOk ? 'text-[#1d1d1f] dark:text-white' : 'text-rose-500 font-medium'}>
-                        File Size is below budget limit ({activeSetting?.preset.id === 'custom' ? activeSetting.customSizeKb : activeSetting?.preset.maxSizeKb} KB)
+                        {_('workspace.sizeBudget', 'File Size is below budget limit')} ({activeSetting?.preset.id === 'custom' ? activeSetting.customSizeKb : activeSetting?.preset.maxSizeKb} KB)
                       </span>
                     </div>
 
@@ -949,14 +954,14 @@ export default function ImageResizerWorkspace() {
                         <AlertCircle size={16} className="text-rose-500 shrink-0" />
                       )}
                       <span className={dimsOk ? 'text-[#1d1d1f] dark:text-white' : 'text-rose-500 font-medium'}>
-                        Dimensions match preset requirements ({activeSetting?.preset.id === 'custom' ? `${activeSetting.customWidth}x${activeSetting.customHeight}` : `${activeSetting?.preset.width}x${activeSetting?.preset.height}`} px)
+                        {_('workspace.dimsMatch', 'Dimensions match preset requirements')} ({activeSetting?.preset.id === 'custom' ? `${activeSetting.customWidth}x${activeSetting.customHeight}` : `${activeSetting?.preset.width}x${activeSetting?.preset.height}`} px)
                       </span>
                     </div>
 
                     {/* Privacy rule */}
                     <div className="flex items-center gap-2.5 text-sm text-emerald-600 dark:text-emerald-400 font-medium">
                       <CheckCircle2 size={16} className="shrink-0" />
-                      <span>Local Sandbox: 100% Client-Side Private</span>
+                      <span>{_('workspace.localPrivate', 'Local Sandbox: 100% Client-Side Private')}</span>
                     </div>
                   </div>
                 </div>
@@ -969,10 +974,10 @@ export default function ImageResizerWorkspace() {
                     className="w-full py-4 rounded-2xl bg-[#0066cc] dark:bg-[#2997ff] text-white hover:opacity-95 disabled:opacity-50 font-bold text-sm flex items-center justify-center gap-2 shadow-md hover:shadow-lg transition-all duration-200 cursor-pointer"
                   >
                     <Download size={18} />
-                    {results.length > 1 ? `Download All ${results.length} JPGs` : 'Download Compliant JPG'}
+                    {results.length > 1 ? _('workspace.downloadAll', 'Download All {count} JPGs').replace('{count}', String(results.length)) : _('workspace.download', 'Download Compliant JPG')}
                   </button>
                   <p className="text-[10px] text-center text-[#7a7a7a] mt-2 leading-relaxed">
-                    Auto-configured with metadata stripped for your security and privacy.
+                    {_('workspace.autoConfig', 'Auto-configured with metadata stripped for your security and privacy.')}
                   </p>
                 </div>
 

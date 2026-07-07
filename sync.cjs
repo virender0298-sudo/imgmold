@@ -5,7 +5,7 @@ import Layout from '../../layouts/Layout.astro';
 import ImageResizerWorkspace from '../../components/ImageResizerWorkspace';
 import FAQ from '../../components/FAQ.astro';
 import { nonDefaultLocales } from '../../i18n/config';
-import { t } from '../../i18n/utils';
+import { t, useTranslations } from '../../i18n/utils';
 
 export function getStaticPaths() {
   return nonDefaultLocales.map((lang) => ({
