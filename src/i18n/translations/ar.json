@@ -1,0 +1,49 @@
+{
+  "site.title": "IMGMOLD.COM - ضاغط صور محلي متميز ومغيّر حجم",
+  "site.description": "اضغط وغيّر حجم صور جواز السفر والتوقيعات والمستندات مباشرة في متصفحك. آمن 100%، بدون نقل بيانات.",
+
+  "nav.about": "حول",
+  "nav.privacy": "الخصوصية",
+  "nav.terms": "الشروط",
+  "nav.contact": "اتصل بنا",
+  "nav.language": "اللغة",
+
+  "hero.badge": "ImgMold",
+  "hero.title": "أداة دقيقة لتغيير حجم الصور والمستندات",
+  "hero.subtitle": "غيّر حجم واضغط أي صورة أو توقيع أو مستند فوراً مباشرة في متصفحك. مثالي للاستخدام اليومي والمرفقات المهنية والنماذج الرسمية.",
+
+  "features.fileSize.title": "أحجام ملفات دقيقة",
+  "features.fileSize.description": "تقوم خوارزمية البحث الثنائي لدينا بتعديل جودة اللوحة بشكل متكرر لإنتاج ملفات أقرب ما يمكن إلى حد الحجم (كيلوبايت) دون تجاوزه أبداً.",
+  "features.fileSize.highlight": "حد الحجم (كيلوبايت)",
+
+  "features.signature.title": "محسّن التوقيعات",
+  "features.signature.description": "حوّل صور الكاميرا للتوقيعات ذات الظلال الصفراء إلى مستندات بالأبيض والأسود بجودة الماسح الضوئي المسطح.",
+  "features.signature.highlight": "ذات الظلال الصفراء",
+
+  "features.privacy.title": "درع خصوصية EXIF",
+  "features.privacy.description": "تتم إزالة بيانات Exif والكاميرا والعدسة وإحداثيات GPS تلقائياً من صورك قبل التنزيل، مما يضمن أقصى خصوصية.",
+  "features.privacy.highlight": "أقصى خصوصية",
+
+  "video.title": "شاهده أثناء العمل",
+  "video.subtitle": "شاهد دليلنا السريع لمدة 60 ثانية لتغيير حجم مستنداتك بشكل مثالي.",
+
+  "comments.title": "تعليقات المجتمع",
+  "comments.subtitle": "انضم إلى آلاف الطلاب والمهنيين والمسافرين الذين يثقون في ImgMold.",
+  "comments.form.title": "اترك تقييماً",
+  "comments.form.name": "اسمك",
+  "comments.form.namePlaceholder": "مثال: أحمد محمد",
+  "comments.form.type": "نوع الطلب",
+  "comments.form.typePlaceholder": "مثال: طلب تأشيرة",
+  "comments.form.comment": "تعليقك",
+  "comments.form.commentPlaceholder": "كيف ساعدك ImgMold؟",
+  "comments.form.submit": "إرسال التقييم",
+  "comments.form.thankYou": "شكراً لك!",
+  "comments.form.submitted": "تم إرسال تقييمك للموافقة عليه.",
+  "comments.form.writeAnother": "اكتب تقييماً آخر",
+
+  "footer.rights": "جميع الحقوق محفوظة.",
+  "footer.localProcessing": "تعمل أداتنا بالكامل محلياً. تتم معالجة صورك وملفات توقيعك في ذاكرة التخزين المؤقت لمتصفحك ولا تصل أبداً إلى خوادمنا.",
+  "footer.privacyPolicy": "سياسة الخصوصية",
+  "footer.termsOfUse": "شروط الاستخدام",
+  "footer.contactUs": "اتصل بنا"
+}

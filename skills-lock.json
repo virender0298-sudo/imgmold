@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "canva-resize-for-social-media": {
+      "source": "canva-sdks/canva-claude-skills",
+      "sourceType": "github",
+      "skillPath": "plugins/canva/skills/resize-for-social-media/SKILL.md",
+      "computedHash": "8bf34274c92b8ad9f1ade446cfcc0c4236aa2ebc836fdafb7e3757b16105cc18"
+    }
+  }
+}

@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark, .dark *));
+
+@layer utilities {
+  .bg-chess-pattern {
+    background-color: #ffffff;
+    background-image: radial-gradient(rgba(0,0,0,0.05) 20%, transparent 20%),
+                      radial-gradient(rgba(0,0,0,0.05) 20%, transparent 20%);
+    background-size: 16px 16px;
+    background-position: 0 0, 8px 8px;
+  }
+  
+  .dark .bg-chess-pattern {
+    background-color: #1a1a1c;
+    background-image: radial-gradient(rgba(255,255,255,0.03) 20%, transparent 20%),
+                      radial-gradient(rgba(255,255,255,0.03) 20%, transparent 20%);
+  }
+
+  .apple-gradient-green {
+    background-image: linear-gradient(90deg, #32d74b 0%, #007aff 25%, #bf5af2 50%, #ff2d55 75%, #ff9500 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .apple-gradient-orange {
+    background-image: linear-gradient(90deg, #ff9500 0%, #ff2d55 25%, #bf5af2 50%, #007aff 75%, #32d74b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .apple-gradient-purple {
+    background-image: linear-gradient(90deg, #bf5af2 0%, #007aff 25%, #32d74b 50%, #ff9500 75%, #ff2d55 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .brand-gradient-sunset {
+    background-image: linear-gradient(90deg, #e11d48 0%, #f97316 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+}

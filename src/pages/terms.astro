@@ -1,0 +1,62 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Terms of Use - ImgMold.com Local Resizer",
+  "description": "Read the terms of use for ImgMold.com. The local resizer is provided for personal use. We are not responsible for final application submissions."
+};
+---
+
+<Layout title="Terms of Use - Secure Local Image Compressor" description="Read our terms of use. Find out about service conditions, rules, and user responsibilities." jsonLd={jsonLd}>
+  <section class="max-w-3xl mx-auto px-6 py-16">
+    <span class="text-xs uppercase tracking-widest text-[#7a7a7a] dark:text-[#cccccc] font-semibold">User Guidelines</span>
+    <h1 class="text-4xl font-extrabold tracking-tight text-[#1d1d1f] dark:text-white mt-1 mb-8">
+      Terms of Use
+    </h1>
+    
+    <div class="prose dark:prose-invert max-w-none text-[#1d1d1f]/90 dark:text-white/90 leading-relaxed space-y-6">
+      <p class="text-sm text-[#7a7a7a] dark:text-[#cccccc]">
+        Last Updated: July 7, 2026
+      </p>
+
+      <p>
+        Welcome to IMGMOLD.COM. By accessing or using this website, you agree to comply with and be bound by the following Terms of Use. If you do not agree to these terms, please do not use our utility.
+      </p>
+
+      <h2 class="text-xl font-bold tracking-tight text-[#1d1d1f] dark:text-white pt-4">1. License and Scope of Use</h2>
+      <p>
+        IMGMOLD.COM grants you a free, non-exclusive license to use this browser-based utility for personal or professional purposes, such as resizing files for school entrance exams, university enrollment, passport submissions, or competitive government employment forms.
+      </p>
+
+      <h2 class="text-xl font-bold tracking-tight text-[#1d1d1f] dark:text-white pt-4">2. Local Sandbox Responsibility</h2>
+      <p>
+        Since all file processes are performed inside your web browser using client-side scripts:
+      </p>
+      <ul class="list-disc pl-6 space-y-2">
+        <li>You retain complete control and responsibility over your source images and resized files.</li>
+        <li>We hold no copy of your inputs or outputs and cannot recover files for you.</li>
+      </ul>
+
+      <h2 class="text-xl font-bold tracking-tight text-[#1d1d1f] dark:text-white pt-4">3. Verification of Official Compliance</h2>
+      <p>
+        While our presets are modeled after current official commission guidelines (e.g. UPSC, SSC portals):
+      </p>
+      <ul class="list-disc pl-6 space-y-2">
+        <li>Portal requirements are subject to change. It is your sole responsibility to check and confirm the final generated file meets the size (KB) and dimension restrictions of the target form before submission.</li>
+        <li>We are not responsible or liable for any rejected applications, form validation errors, or submissions that fail to meet compliance criteria.</li>
+      </ul>
+
+      <h2 class="text-xl font-bold tracking-tight text-[#1d1d1f] dark:text-white pt-4">4. Prohibited Actions</h2>
+      <p>
+        You may not use this website to distribute malware, reverse-engineer proprietary client-side codebase assets, or script automated bot requests that cause excessive hosting load.
+      </p>
+
+      <h2 class="text-xl font-bold tracking-tight text-[#1d1d1f] dark:text-white pt-4">5. Disclaimer of Warranties</h2>
+      <p>
+        This service is provided "as is" without warranty of any kind, either express or implied, including the implied warranties of merchantability, fitness for a particular purpose, or non-infringement.
+      </p>
+    </div>
+  </section>
+</Layout>

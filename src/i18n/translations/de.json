@@ -1,0 +1,49 @@
+{
+  "site.title": "IMGMOLD.COM - Premium lokaler Fotokompressor und Größenanpasser",
+  "site.description": "Komprimieren und skalieren Sie Passfotos, Unterschriften und Dokumentenfotos direkt in Ihrem Browser. 100% sicher, keine Datenübertragung.",
+
+  "nav.about": "Über uns",
+  "nav.privacy": "Datenschutz",
+  "nav.terms": "AGB",
+  "nav.contact": "Kontakt",
+  "nav.language": "Sprache",
+
+  "hero.badge": "ImgMold",
+  "hero.title": "Präziser Foto- und Dokumenten-Größenanpasser",
+  "hero.subtitle": "Ändern Sie sofort die Größe und komprimieren Sie jedes Foto, jede Unterschrift oder jedes Dokument direkt in Ihrem Browser. Perfekt für den täglichen Gebrauch, professionelle Anhänge und offizielle Formulare.",
+
+  "features.fileSize.title": "Exakte Dateigrößenziele",
+  "features.fileSize.description": "Unser binärer Suchalgorithmus moduliert die Canvas-Qualität rekursiv, um Ausgabedateien so nah wie mathematisch möglich an Ihr GRÖßENLIMIT (KB) zu bringen, ohne es jemals zu überschreiten.",
+  "features.fileSize.highlight": "GRÖßENLIMIT (KB)",
+
+  "features.signature.title": "Unterschrift-Verbesserer",
+  "features.signature.description": "Verwandeln Sie Kameraaufnahmen von Unterschriften MIT GELBEM SCHATTEN in reine Schwarz-Weiß-Dokumente in Flachbettscanner-Qualität.",
+  "features.signature.highlight": "MIT GELBEM SCHATTEN",
+
+  "features.privacy.title": "EXIF-Datenschutzschild",
+  "features.privacy.description": "Exif-, Kamera-, Objektiv-Metadaten und GPS-Koordinaten werden automatisch vor dem Download aus Ihren Fotos entfernt, um MAXIMALEN DATENSCHUTZ zu gewährleisten.",
+  "features.privacy.highlight": "MAXIMALEN DATENSCHUTZ",
+
+  "video.title": "Sehen Sie es in Aktion",
+  "video.subtitle": "Sehen Sie unsere schnelle 60-Sekunden-Anleitung zum perfekten Skalieren Ihrer Dokumente.",
+
+  "comments.title": "Community-Kommentare",
+  "comments.subtitle": "Schließen Sie sich Tausenden von Studenten, Fachleuten und Reisenden an, die ImgMold vertrauen.",
+  "comments.form.title": "Bewertung abgeben",
+  "comments.form.name": "Ihr Name",
+  "comments.form.namePlaceholder": "z.B. Max Müller",
+  "comments.form.type": "Antragsart",
+  "comments.form.typePlaceholder": "z.B. Visumsantrag",
+  "comments.form.comment": "Ihr Kommentar",
+  "comments.form.commentPlaceholder": "Wie hat Ihnen ImgMold geholfen?",
+  "comments.form.submit": "Bewertung absenden",
+  "comments.form.thankYou": "Danke!",
+  "comments.form.submitted": "Ihre Bewertung wurde zur Genehmigung eingereicht.",
+  "comments.form.writeAnother": "Weitere schreiben",
+
+  "footer.rights": "Alle Rechte vorbehalten.",
+  "footer.localProcessing": "Unser Tool arbeitet vollständig lokal. Ihre Fotos und Unterschriftsdateien werden im Cache Ihres Browsers verarbeitet und erreichen niemals unsere Server.",
+  "footer.privacyPolicy": "Datenschutzrichtlinie",
+  "footer.termsOfUse": "Nutzungsbedingungen",
+  "footer.contactUs": "Kontaktieren Sie uns"
+}

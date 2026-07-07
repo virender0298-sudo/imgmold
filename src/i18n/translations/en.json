@@ -1,0 +1,49 @@
+{
+  "site.title": "IMGMOLD.COM - Premium Local Photo Compressor & Preset Resizer",
+  "site.description": "Compress and resize passport photos, signatures, and document photos for UPSC, SSC, and official government exam forms locally in your browser. 100% secure, zero data transfer.",
+
+  "nav.about": "About",
+  "nav.privacy": "Privacy",
+  "nav.terms": "Terms",
+  "nav.contact": "Contact",
+  "nav.language": "Language",
+
+  "hero.badge": "ImgMold",
+  "hero.title": "Precision Photo & Document Resizer",
+  "hero.subtitle": "Instantly resize and compress any photo, signature, or document entirely in your browser. Perfect for everyday use, professional attachments, and strict government exam forms.",
+
+  "features.fileSize.title": "Strict File Size Targets",
+  "features.fileSize.description": "Our proprietary binary search loop algorithm modulates canvas quality recursively to generate output files as close to your SIZE BUDGET LIMIT (KB) as mathematically possible without ever going over it.",
+  "features.fileSize.highlight": "SIZE BUDGET LIMIT (KB)",
+
+  "features.signature.title": "Signature Enhancer",
+  "features.signature.description": "Turn YELLOW SHADOW-FILLED camera snapshots of signatures into pure black-and-white flatbed-scanned document quality using client-side pixel manipulation algorithms.",
+  "features.signature.highlight": "YELLOW SHADOW-FILLED",
+
+  "features.privacy.title": "EXIF Privacy Shield",
+  "features.privacy.description": "Exif, camera make, lens metadata, and GPS location coords are automatically stripped from your photos before download, ensuring MAXIMUM PRIVACY and preventing form upload validation issues.",
+  "features.privacy.highlight": "MAXIMUM PRIVACY",
+
+  "video.title": "See It In Action",
+  "video.subtitle": "Watch our quick 60-second guide to resizing your documents perfectly.",
+
+  "comments.title": "Community Comments",
+  "comments.subtitle": "Join thousands of students, professionals, and travelers who trust ImgMold.",
+  "comments.form.title": "Leave a Review",
+  "comments.form.name": "Your Name",
+  "comments.form.namePlaceholder": "e.g. Maya Sharma",
+  "comments.form.type": "Application Type",
+  "comments.form.typePlaceholder": "e.g. UPSC Aspirant",
+  "comments.form.comment": "Your Comment",
+  "comments.form.commentPlaceholder": "How did ImgMold help you?",
+  "comments.form.submit": "Submit Review",
+  "comments.form.thankYou": "Thank you!",
+  "comments.form.submitted": "Your review has been submitted for approval.",
+  "comments.form.writeAnother": "Write another",
+
+  "footer.rights": "All rights reserved.",
+  "footer.localProcessing": "Our tool operates completely locally. Your photos and signature files are processed inside your browser cache and never hit our servers.",
+  "footer.privacyPolicy": "Privacy Policy",
+  "footer.termsOfUse": "Terms of Use",
+  "footer.contactUs": "Contact Us"
+}

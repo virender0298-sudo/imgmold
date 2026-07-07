@@ -1,0 +1,63 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Privacy Policy - ImgMold.com Local Resizer",
+  "description": "Read the privacy policy of ImgMold.com. All processing occurs locally in the browser; we do not store, view, or upload your photos."
+};
+---
+
+<Layout title="Privacy Policy - Secure Browser-Only Image Compressor" description="Read our privacy policy. Your images and documents are processed locally inside your browser and never uploaded." jsonLd={jsonLd}>
+  <section class="max-w-3xl mx-auto px-6 py-16">
+    <span class="text-xs uppercase tracking-widest text-[#7a7a7a] dark:text-[#cccccc] font-semibold">Security Standards</span>
+    <h1 class="text-4xl font-extrabold tracking-tight text-[#1d1d1f] dark:text-white mt-1 mb-8">
+      Privacy Policy
+    </h1>
+    
+    <div class="prose dark:prose-invert max-w-none text-[#1d1d1f]/90 dark:text-white/90 leading-relaxed space-y-6">
+      <p class="text-sm text-[#7a7a7a] dark:text-[#cccccc]">
+        Last Updated: July 7, 2026
+      </p>
+
+      <p>
+        At IMGMOLD.COM, we treat privacy as a fundamental human right. Because we process sensitive files like signature scans and identification photos, we have engineered our architecture to ensure **we never see or store your data.**
+      </p>
+
+      <h2 class="text-xl font-bold tracking-tight text-[#1d1d1f] dark:text-white pt-4">1. Local-Only Processing</h2>
+      <p>
+        Unlike typical web utilities, IMGMOLD.COM does not upload your image files to any server. All processing—including resizing, file size optimization, signature scanning filters, and name/date banner burning—is executed locally on your machine using standard HTML5 Canvas APIs inside your browser cache.
+      </p>
+
+      <h2 class="text-xl font-bold tracking-tight text-[#1d1d1f] dark:text-white pt-4">2. Zero Data Collection</h2>
+      <p>
+        Since no file transfer occurs:
+      </p>
+      <ul class="list-disc pl-6 space-y-2">
+        <li>We do not collect, view, store, or share your uploaded images, signatures, or documents.</li>
+        <li>No databases are maintained containing your files.</li>
+        <li>We have no visibility into the photos or data you select.</li>
+      </ul>
+
+      <h2 class="text-xl font-bold tracking-tight text-[#1d1d1f] dark:text-white pt-4">3. Automatically Stripped Metadata</h2>
+      <p>
+        When you process an image through our application, we draw the image onto a local Canvas context and export it back as a JPEG. This drawing and export process automatically discards all EXIF metadata headers (which can contain location coords, camera models, creation dates, and lenses), safeguarding your privacy.
+      </p>
+
+      <h2 class="text-xl font-bold tracking-tight text-[#1d1d1f] dark:text-white pt-4">4. Third-Party Analytics & Advertising</h2>
+      <p>
+        To keep this app free, we display minimalist, static third-party ads and run basic, anonymous site analytics:
+      </p>
+      <ul class="list-disc pl-6 space-y-2">
+        <li><strong>Google Analytics:</strong> We track basic site traffic patterns anonymously. No personal user data or image metadata is ever tracked.</li>
+        <li><strong>Google AdSense:</strong> Standard ad banners are displayed. They may use cookies or device identification tokens to serve ads.</li>
+      </ul>
+
+      <h2 class="text-xl font-bold tracking-tight text-[#1d1d1f] dark:text-white pt-4">5. Contact</h2>
+      <p>
+        For inquiries regarding our security practices, feel free to visit our <a href="/contact" class="text-[#0066cc] dark:text-[#2997ff] hover:underline">Contact page</a>.
+      </p>
+    </div>
+  </section>
+</Layout>

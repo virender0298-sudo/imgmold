@@ -1,0 +1,56 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": "About ImgMold.com Local Resizer",
+  "description": "Learn how ImgMold.com enables secure, private client-side image compression and resizing for official government applications."
+};
+---
+
+<Layout title="About Us - Secure Local Image Resizer" description="Learn about the browser-only client-side compression technology driving ImgMold.com for government exam forms." jsonLd={jsonLd}>
+  <section class="max-w-3xl mx-auto px-6 py-16">
+    <span class="text-xs uppercase tracking-widest text-[#7a7a7a] dark:text-[#cccccc] font-semibold">Our Technology</span>
+    <h1 class="text-4xl font-extrabold tracking-tight text-[#1d1d1f] dark:text-white mt-1 mb-8">
+      About ImgMold
+    </h1>
+    
+    <div class="prose dark:prose-invert max-w-none text-[#1d1d1f]/90 dark:text-white/90 leading-relaxed space-y-6">
+      <p class="text-lg">
+        ImgMold was built with a single goal: **to provide an ultra-secure, premium, and easy-to-use utility for resizing official application documents.**
+      </p>
+      
+      <p>
+        Applying for government examinations, passport requests, or university portals (like UPSC, SSC, state service commissions, or university entrance exams) often requires photos and signatures to match extremely rigid dimensions and file size constraints (such as exactly 50 KB or 20 KB). 
+      </p>
+      
+      <p>
+        Traditional online resizers require you to upload your sensitive personal photos and signature files to their remote servers. This introduces a major security risk: your identity, signature, and private documents are stored in databases you do not control.
+      </p>
+
+      <div class="bg-[#fafafc] dark:bg-[#1a1a1c] border border-[#e0e0e0] dark:border-[#333333] rounded-2xl p-6 my-8">
+        <h3 class="text-lg font-bold text-[#1d1d1f] dark:text-white mb-2">100% Client-Side Sandbox</h3>
+        <p class="text-sm text-[#7a7a7a] dark:text-[#cccccc] leading-relaxed">
+          ImgMold.com operates completely inside your web browser. When you drop an image, our custom React scripts load it into a local HTML5 Canvas buffer. All pixel calculations, quality searches, and metadata stripping take place on your CPU. No files or details are ever sent to a remote web server.
+        </p>
+      </div>
+
+      <h2 class="text-2xl font-bold tracking-tight text-[#1d1d1f] dark:text-white pt-4">Core Principles</h2>
+      <ul class="list-disc pl-6 space-y-3">
+        <li>
+          <strong>No Data Transfer:</strong> Your photo stays on your device. You can even disable your internet connection after loading the page and the tool will still operate.
+        </li>
+        <li>
+          <strong>Mathematical Target Precision:</strong> We implement an iterative binary search algorithm to target file size limits precisely without ever exceeding them, eliminating the trial-and-error loop.
+        </li>
+        <li>
+          <strong>Clean Signature Scans:</strong> Our signature scan filter adjusts pixels to mimic high-end hardware scanners, removing shadows and noise from mobile photographs.
+        </li>
+        <li>
+          <strong>Zero Trackers & Cookies:</strong> We do not track your session or place tracking cookies on your device. We monetize cleanly with static non-invasive ads to support domain and hosting costs.
+        </li>
+      </ul>
+    </div>
+  </section>
+</Layout>

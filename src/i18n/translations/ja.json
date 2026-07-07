@@ -1,0 +1,49 @@
+{
+  "site.title": "IMGMOLD.COM - プレミアムローカル写真圧縮・リサイザー",
+  "site.description": "パスポート写真、署名、書類写真をブラウザ内で直接圧縮・リサイズ。100%安全、データ転送なし。",
+
+  "nav.about": "概要",
+  "nav.privacy": "プライバシー",
+  "nav.terms": "利用規約",
+  "nav.contact": "お問い合わせ",
+  "nav.language": "言語",
+
+  "hero.badge": "ImgMold",
+  "hero.title": "精密な写真・書類リサイザー",
+  "hero.subtitle": "ブラウザ内で写真、署名、書類を瞬時にリサイズ・圧縮。日常使い、ビジネス添付、公式申請フォームに最適。",
+
+  "features.fileSize.title": "正確なファイルサイズ",
+  "features.fileSize.description": "独自のバイナリサーチアルゴリズムがキャンバス品質を再帰的に調整し、サイズ上限(KB)にできるだけ近い出力ファイルを生成します。超過することはありません。",
+  "features.fileSize.highlight": "サイズ上限(KB)",
+
+  "features.signature.title": "署名エンハンサー",
+  "features.signature.description": "黄色い影のあるカメラ撮影の署名を、純粋な白黒のフラットベッドスキャナー品質の書類に変換します。",
+  "features.signature.highlight": "黄色い影のある",
+
+  "features.privacy.title": "EXIFプライバシーシールド",
+  "features.privacy.description": "ダウンロード前にExif、カメラ、レンズのメタデータとGPS座標が写真から自動的に削除され、最大限のプライバシーが保証されます。",
+  "features.privacy.highlight": "最大限のプライバシー",
+
+  "video.title": "実際の動作を見る",
+  "video.subtitle": "書類を完璧にリサイズする60秒クイックガイドをご覧ください。",
+
+  "comments.title": "コミュニティコメント",
+  "comments.subtitle": "ImgMoldを信頼する何千もの学生、専門家、旅行者に参加しましょう。",
+  "comments.form.title": "レビューを書く",
+  "comments.form.name": "お名前",
+  "comments.form.namePlaceholder": "例：田中太郎",
+  "comments.form.type": "申請タイプ",
+  "comments.form.typePlaceholder": "例：ビザ申請",
+  "comments.form.comment": "コメント",
+  "comments.form.commentPlaceholder": "ImgMoldはどのように役立ちましたか？",
+  "comments.form.submit": "レビューを送信",
+  "comments.form.thankYou": "ありがとうございます！",
+  "comments.form.submitted": "レビューは承認待ちです。",
+  "comments.form.writeAnother": "もう一つ書く",
+
+  "footer.rights": "全著作権所有。",
+  "footer.localProcessing": "当ツールは完全にローカルで動作します。写真と署名ファイルはブラウザのキャッシュ内で処理され、サーバーに送信されることはありません。",
+  "footer.privacyPolicy": "プライバシーポリシー",
+  "footer.termsOfUse": "利用規約",
+  "footer.contactUs": "お問い合わせ"
+}

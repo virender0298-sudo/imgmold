@@ -1,0 +1,21 @@
+---
+import Layout from '../layouts/Layout.astro';
+import FAQ from '../components/FAQ.astro';
+---
+
+<Layout title="Frequently Asked Questions - IMGMOLD.COM">
+  <!-- Subtle Header -->
+  <div class="w-full max-w-6xl mx-auto px-6 py-12 pb-4">
+    <div class="flex items-center gap-3">
+      <a href="/" class="text-[#007aff] hover:underline text-sm font-medium flex items-center gap-1">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+        </svg>
+        Back to Resizer
+      </a>
+    </div>
+  </div>
+
+  <!-- FAQ Component without limit -->
+  <FAQ />
+</Layout>

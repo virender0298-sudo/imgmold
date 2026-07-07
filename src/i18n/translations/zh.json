@@ -1,0 +1,49 @@
+{
+  "site.title": "IMGMOLD.COM - 高级本地照片压缩器和调整工具",
+  "site.description": "在浏览器中直接压缩和调整护照照片、签名和文件照片的大小。100%安全，零数据传输。",
+
+  "nav.about": "关于",
+  "nav.privacy": "隐私",
+  "nav.terms": "条款",
+  "nav.contact": "联系",
+  "nav.language": "语言",
+
+  "hero.badge": "ImgMold",
+  "hero.title": "精准照片和文件调整工具",
+  "hero.subtitle": "在浏览器中即时调整和压缩任何照片、签名或文件。适用于日常使用、专业附件和官方考试表格。",
+
+  "features.fileSize.title": "精确的文件大小目标",
+  "features.fileSize.description": "我们的二分搜索算法递归调整画布质量，生成尽可能接近您的大小限制(KB)的输出文件，永不超过。",
+  "features.fileSize.highlight": "大小限制(KB)",
+
+  "features.signature.title": "签名增强器",
+  "features.signature.description": "将带有黄色阴影的签名相机照片转换为纯黑白平板扫描仪质量的文件。",
+  "features.signature.highlight": "带有黄色阴影的",
+
+  "features.privacy.title": "EXIF隐私保护",
+  "features.privacy.description": "下载前自动从照片中删除Exif、相机、镜头元数据和GPS坐标，确保最大隐私保护。",
+  "features.privacy.highlight": "最大隐私保护",
+
+  "video.title": "查看实际效果",
+  "video.subtitle": "观看我们60秒快速指南，完美调整文件大小。",
+
+  "comments.title": "社区评论",
+  "comments.subtitle": "加入数千名信任ImgMold的学生、专业人士和旅行者。",
+  "comments.form.title": "撰写评论",
+  "comments.form.name": "您的姓名",
+  "comments.form.namePlaceholder": "例：张三",
+  "comments.form.type": "申请类型",
+  "comments.form.typePlaceholder": "例：签证申请",
+  "comments.form.comment": "您的评论",
+  "comments.form.commentPlaceholder": "ImgMold如何帮助了您？",
+  "comments.form.submit": "提交评论",
+  "comments.form.thankYou": "谢谢！",
+  "comments.form.submitted": "您的评论已提交等待审核。",
+  "comments.form.writeAnother": "再写一条",
+
+  "footer.rights": "版权所有。",
+  "footer.localProcessing": "我们的工具完全在本地运行。您的照片和签名文件在浏览器缓存中处理，永远不会到达我们的服务器。",
+  "footer.privacyPolicy": "隐私政策",
+  "footer.termsOfUse": "使用条款",
+  "footer.contactUs": "联系我们"
+}

@@ -1,0 +1,49 @@
+{
+  "site.title": "IMGMOLD.COM - Compresor de fotos local premium y redimensionador",
+  "site.description": "Comprime y redimensiona fotos de pasaporte, firmas y documentos directamente en tu navegador. 100% seguro, sin transferencia de datos.",
+
+  "nav.about": "Acerca de",
+  "nav.privacy": "Privacidad",
+  "nav.terms": "Términos",
+  "nav.contact": "Contacto",
+  "nav.language": "Idioma",
+
+  "hero.badge": "ImgMold",
+  "hero.title": "Redimensionador preciso de fotos y documentos",
+  "hero.subtitle": "Redimensiona y comprime al instante cualquier foto, firma o documento directamente en tu navegador. Perfecto para uso diario, adjuntos profesionales y formularios oficiales.",
+
+  "features.fileSize.title": "Tamaño de archivo exacto",
+  "features.fileSize.description": "Nuestro algoritmo de búsqueda binaria modula la calidad del lienzo recursivamente para generar archivos lo más cercanos posible a tu LÍMITE DE TAMAÑO (KB) sin superarlo jamás.",
+  "features.fileSize.highlight": "LÍMITE DE TAMAÑO (KB)",
+
+  "features.signature.title": "Mejorador de firmas",
+  "features.signature.description": "Convierte capturas de cámara de firmas CON SOMBRAS AMARILLAS en documentos de calidad escáner plano en blanco y negro puro.",
+  "features.signature.highlight": "CON SOMBRAS AMARILLAS",
+
+  "features.privacy.title": "Escudo de privacidad EXIF",
+  "features.privacy.description": "Los metadatos Exif, cámara, lente y coordenadas GPS se eliminan automáticamente de tus fotos antes de la descarga, garantizando MÁXIMA PRIVACIDAD.",
+  "features.privacy.highlight": "MÁXIMA PRIVACIDAD",
+
+  "video.title": "Míralo en acción",
+  "video.subtitle": "Mira nuestra guía rápida de 60 segundos para redimensionar tus documentos perfectamente.",
+
+  "comments.title": "Comentarios de la comunidad",
+  "comments.subtitle": "Únete a miles de estudiantes, profesionales y viajeros que confían en ImgMold.",
+  "comments.form.title": "Deja una reseña",
+  "comments.form.name": "Tu nombre",
+  "comments.form.namePlaceholder": "ej. María García",
+  "comments.form.type": "Tipo de solicitud",
+  "comments.form.typePlaceholder": "ej. Solicitud de visa",
+  "comments.form.comment": "Tu comentario",
+  "comments.form.commentPlaceholder": "¿Cómo te ayudó ImgMold?",
+  "comments.form.submit": "Enviar reseña",
+  "comments.form.thankYou": "¡Gracias!",
+  "comments.form.submitted": "Tu reseña ha sido enviada para aprobación.",
+  "comments.form.writeAnother": "Escribir otra",
+
+  "footer.rights": "Todos los derechos reservados.",
+  "footer.localProcessing": "Nuestra herramienta opera completamente de forma local. Tus fotos y archivos de firma se procesan en la caché de tu navegador y nunca llegan a nuestros servidores.",
+  "footer.privacyPolicy": "Política de privacidad",
+  "footer.termsOfUse": "Términos de uso",
+  "footer.contactUs": "Contáctanos"
+}

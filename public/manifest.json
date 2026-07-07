@@ -1,0 +1,17 @@
+{
+  "name": "IMGResizer Local Utility",
+  "short_name": "IMGRESIZER",
+  "description": "Secure local-first passport photo resizer and signature compressor.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0066cc",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

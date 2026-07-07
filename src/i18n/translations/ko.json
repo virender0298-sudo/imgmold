@@ -1,0 +1,49 @@
+{
+  "site.title": "IMGMOLD.COM - 프리미엄 로컬 사진 압축기 및 리사이저",
+  "site.description": "여권 사진, 서명, 문서 사진을 브라우저에서 직접 압축 및 크기 조정. 100% 안전, 데이터 전송 없음.",
+
+  "nav.about": "소개",
+  "nav.privacy": "개인정보",
+  "nav.terms": "이용약관",
+  "nav.contact": "문의",
+  "nav.language": "언어",
+
+  "hero.badge": "ImgMold",
+  "hero.title": "정밀 사진 및 문서 리사이저",
+  "hero.subtitle": "브라우저에서 사진, 서명 또는 문서를 즉시 크기 조정하고 압축하세요. 일상적인 사용, 전문 첨부 파일, 공식 시험 양식에 완벽합니다.",
+
+  "features.fileSize.title": "정확한 파일 크기 목표",
+  "features.fileSize.description": "독자적인 이진 탐색 알고리즘이 캔버스 품질을 재귀적으로 조정하여 크기 제한(KB)에 최대한 가까운 출력 파일을 생성합니다. 절대 초과하지 않습니다.",
+  "features.fileSize.highlight": "크기 제한(KB)",
+
+  "features.signature.title": "서명 향상기",
+  "features.signature.description": "노란 그림자가 있는 카메라 촬영 서명을 순수한 흑백 플랫베드 스캐너 품질의 문서로 변환합니다.",
+  "features.signature.highlight": "노란 그림자가 있는",
+
+  "features.privacy.title": "EXIF 개인정보 보호",
+  "features.privacy.description": "다운로드 전에 Exif, 카메라, 렌즈 메타데이터 및 GPS 좌표가 사진에서 자동으로 제거되어 최대한의 프라이버시를 보장합니다.",
+  "features.privacy.highlight": "최대한의 프라이버시",
+
+  "video.title": "실제 작동 보기",
+  "video.subtitle": "문서를 완벽하게 크기 조정하는 60초 빠른 가이드를 시청하세요.",
+
+  "comments.title": "커뮤니티 댓글",
+  "comments.subtitle": "ImgMold를 신뢰하는 수천 명의 학생, 전문가, 여행자와 함께하세요.",
+  "comments.form.title": "리뷰 작성",
+  "comments.form.name": "이름",
+  "comments.form.namePlaceholder": "예: 김민수",
+  "comments.form.type": "신청 유형",
+  "comments.form.typePlaceholder": "예: 비자 신청",
+  "comments.form.comment": "댓글",
+  "comments.form.commentPlaceholder": "ImgMold가 어떻게 도움이 되었나요?",
+  "comments.form.submit": "리뷰 제출",
+  "comments.form.thankYou": "감사합니다!",
+  "comments.form.submitted": "리뷰가 승인을 위해 제출되었습니다.",
+  "comments.form.writeAnother": "다른 리뷰 작성",
+
+  "footer.rights": "모든 권리 보유.",
+  "footer.localProcessing": "우리 도구는 완전히 로컬에서 작동합니다. 사진과 서명 파일은 브라우저 캐시에서 처리되며 서버에 전송되지 않습니다.",
+  "footer.privacyPolicy": "개인정보 처리방침",
+  "footer.termsOfUse": "이용약관",
+  "footer.contactUs": "문의하기"
+}

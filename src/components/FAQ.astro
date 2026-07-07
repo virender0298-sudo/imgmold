@@ -1,0 +1,77 @@
+---
+import { faqsByLocale } from '../data/faqs';
+
+export interface Props {
+  limit?: number;
+  locale?: string;
+}
+
+const { limit, locale = 'en' } = Astro.props;
+const currentFaqs = faqsByLocale[locale] || faqsByLocale['en'];
+const displayedFaqs = limit ? currentFaqs.slice(0, limit) : currentFaqs;
+const hasMore = limit ? currentFaqs.length > limit : false;
+
+const titles: Record<string, string> = {
+  en: "Frequently Asked Questions",
+  hi: "अक्सर पूछे जाने वाले प्रश्न",
+  es: "Preguntas frecuentes",
+  fr: "Foire aux questions",
+  de: "Häufig gestellte Fragen",
+  pt: "Perguntas frequentes",
+  ja: "よくある質問",
+  ko: "자주 묻는 질문",
+  zh: "常见问题",
+  ar: "الأسئلة المتداولة"
+};
+
+const subtitles: Record<string, string> = {
+  en: "Common questions about privacy and usage.",
+  hi: "गोपनीयता और उपयोग के बारे में सामान्य प्रश्न।",
+  es: "Preguntas comunes sobre privacidad y uso.",
+  fr: "Questions courantes sur la confidentialité et l'utilisation.",
+  de: "Häufige Fragen zu Datenschutz und Nutzung.",
+  pt: "Perguntas comuns sobre privacidade e uso.",
+  ja: "プライバシーと利用に関するよくある質問。",
+  ko: "개인정보 보호 및 사용에 관한 일반적인 질문.",
+  zh: "关于隐私和使用的常见问题。",
+  ar: "أسئلة شائعة حول الخصوصية والاستخدام."
+};
+---
+
+<section class="max-w-4xl mx-auto px-6 py-16">
+  <div class="text-center mb-10">
+    <h2 class="text-3xl font-black tracking-tight text-[#1d1d1f] dark:text-white mb-4">
+      {titles[locale] || titles['en']}
+    </h2>
+    <p class="text-lg text-[#7a7a7a] dark:text-[#cccccc]">
+      {subtitles[locale] || subtitles['en']}
+    </p>
+  </div>
+
+  <div class="space-y-4">
+    {displayedFaqs.map((faq) => (
+      <div class="bg-white dark:bg-[#1c1c1e] rounded-2xl p-6 shadow-sm border border-[#e0e0e0] dark:border-[#2a2a2c] transition-all hover:shadow-md">
+        <h3 class="text-lg font-bold text-[#1d1d1f] dark:text-white mb-2">
+          {faq.question}
+        </h3>
+        <p class="text-[#424245] dark:text-[#a1a1a6] leading-relaxed">
+          {faq.answer}
+        </p>
+      </div>
+    ))}
+  </div>
+  
+  {hasMore && (
+    <div class="mt-8 flex justify-center">
+      <a 
+        href="/faq" 
+        class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#007aff] text-white font-semibold hover:bg-[#0066cc] transition-colors shadow-sm"
+      >
+        View All FAQs
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+        </svg>
+      </a>
+    </div>
+  )}
+</section>

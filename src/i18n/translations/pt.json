@@ -1,0 +1,49 @@
+{
+  "site.title": "IMGMOLD.COM - Compressor de fotos local premium e redimensionador",
+  "site.description": "Comprima e redimensione fotos de passaporte, assinaturas e documentos diretamente no seu navegador. 100% seguro, sem transferência de dados.",
+
+  "nav.about": "Sobre",
+  "nav.privacy": "Privacidade",
+  "nav.terms": "Termos",
+  "nav.contact": "Contato",
+  "nav.language": "Idioma",
+
+  "hero.badge": "ImgMold",
+  "hero.title": "Redimensionador preciso de fotos e documentos",
+  "hero.subtitle": "Redimensione e comprima instantaneamente qualquer foto, assinatura ou documento diretamente no seu navegador. Perfeito para uso diário, anexos profissionais e formulários oficiais.",
+
+  "features.fileSize.title": "Tamanho de arquivo exato",
+  "features.fileSize.description": "Nosso algoritmo de busca binária modula a qualidade do canvas recursivamente para gerar arquivos o mais próximo possível do seu LIMITE DE TAMANHO (KB) sem jamais ultrapassá-lo.",
+  "features.fileSize.highlight": "LIMITE DE TAMANHO (KB)",
+
+  "features.signature.title": "Melhorador de assinaturas",
+  "features.signature.description": "Transforme capturas de câmera de assinaturas COM SOMBRAS AMARELAS em documentos preto e branco puros com qualidade de scanner de mesa.",
+  "features.signature.highlight": "COM SOMBRAS AMARELAS",
+
+  "features.privacy.title": "Escudo de privacidade EXIF",
+  "features.privacy.description": "Metadados Exif, câmera, lente e coordenadas GPS são automaticamente removidos das suas fotos antes do download, garantindo PRIVACIDADE MÁXIMA.",
+  "features.privacy.highlight": "PRIVACIDADE MÁXIMA",
+
+  "video.title": "Veja em ação",
+  "video.subtitle": "Assista ao nosso guia rápido de 60 segundos para redimensionar seus documentos perfeitamente.",
+
+  "comments.title": "Comentários da comunidade",
+  "comments.subtitle": "Junte-se a milhares de estudantes, profissionais e viajantes que confiam no ImgMold.",
+  "comments.form.title": "Deixe uma avaliação",
+  "comments.form.name": "Seu nome",
+  "comments.form.namePlaceholder": "ex. João Silva",
+  "comments.form.type": "Tipo de solicitação",
+  "comments.form.typePlaceholder": "ex. Pedido de visto",
+  "comments.form.comment": "Seu comentário",
+  "comments.form.commentPlaceholder": "Como o ImgMold te ajudou?",
+  "comments.form.submit": "Enviar avaliação",
+  "comments.form.thankYou": "Obrigado!",
+  "comments.form.submitted": "Sua avaliação foi enviada para aprovação.",
+  "comments.form.writeAnother": "Escrever outra",
+
+  "footer.rights": "Todos os direitos reservados.",
+  "footer.localProcessing": "Nossa ferramenta opera completamente localmente. Suas fotos e arquivos de assinatura são processados no cache do seu navegador e nunca chegam aos nossos servidores.",
+  "footer.privacyPolicy": "Política de privacidade",
+  "footer.termsOfUse": "Termos de uso",
+  "footer.contactUs": "Fale conosco"
+}

@@ -1,0 +1,177 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ImageResizerWorkspace from '../../components/ImageResizerWorkspace';
+import FAQ from '../../components/FAQ.astro';
+import { nonDefaultLocales } from '../../i18n/config';
+import { t } from '../../i18n/utils';
+
+export function getStaticPaths() {
+  return nonDefaultLocales.map((lang) => ({
+    params: { lang },
+  }));
+}
+
+const { lang } = Astro.params;
+const locale = lang || 'en';
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "ImgMold.com Local Resizer",
+  "operatingSystem": "All",
+  "applicationCategory": "UtilityApplication",
+  "offers": {
+    "@type": "Offer",
+    "price": "0.00",
+    "priceCurrency": "USD"
+  },
+  "description": t(locale, 'site.description')
+};
+---
+
+<Layout locale={locale} jsonLd={jsonLd} title={t(locale, 'site.title')} description={t(locale, 'site.description')}>
+  <!-- Hero Section -->
+  <section class="max-w-6xl mx-auto pt-16 pb-12 px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <div class="text-left">
+      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#0066cc]/10 dark:bg-[#2997ff]/10 text-[#0066cc] dark:text-[#2997ff] text-xs font-semibold mb-4">
+        <span class="w-1.5 h-1.5 rounded-full bg-[#0066cc] dark:bg-[#2997ff] animate-pulse"></span>
+        Secure Local-First Processing
+      </div>
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight text-[#1d1d1f] dark:text-white leading-tight mb-4 font-display">
+        {t(locale, 'hero.title')}
+      </h1>
+      <p class="text-lg md:text-xl text-[#7a7a7a] dark:text-[#cccccc] max-w-xl leading-relaxed">
+        {t(locale, 'hero.subtitle')}
+      </p>
+    </div>
+    
+    <div class="flex justify-center lg:justify-end">
+      <div class="relative w-full max-w-md aspect-square rounded-[32px] overflow-hidden shadow-[0_8px_40px_rgba(0,0,0,0.08)] dark:shadow-none border border-[#e0e0e0] dark:border-[#2a2a2c] transform hover:scale-[1.02] transition-transform duration-500">
+        <img src="/images/hero_child.png" alt="Happy child" class="w-full h-full object-cover bg-white" />
+      </div>
+    </div>
+  </section>
+
+  <!-- React Workspace -->
+  <ImageResizerWorkspace client:only="react" />
+
+  <!-- Features Highlights -->
+  <section class="max-w-6xl mx-auto px-6 py-16 border-t border-[#e0e0e0] dark:border-[#222222] grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
+    <div class="flex flex-col gap-4 bg-white dark:bg-[#1c1c1e] p-8 rounded-3xl border border-[#e0e0e0] dark:border-[#2a2a2c] shadow-[0_4px_24px_rgba(0,0,0,0.04)] dark:shadow-none hover:shadow-[0_8px_32px_rgba(0,0,0,0.08)] transition-shadow">
+      <h3 class="text-[19px] font-semibold tracking-tight text-[#0d9488] dark:text-[#14b8a6]">{t(locale, 'features.fileSize.title')}</h3>
+      <p class="text-[14px] font-bold text-[#1d1d1f] dark:text-[#cccccc] leading-relaxed">
+        {t(locale, 'features.fileSize.description')}
+      </p>
+    </div>
+
+    <div class="flex flex-col gap-4 bg-white dark:bg-[#1c1c1e] p-8 rounded-3xl border border-[#e0e0e0] dark:border-[#2a2a2c] shadow-[0_4px_24px_rgba(0,0,0,0.04)] dark:shadow-none hover:shadow-[0_8px_32px_rgba(0,0,0,0.08)] transition-shadow">
+      <h3 class="text-[19px] font-semibold tracking-tight brand-gradient-sunset">{t(locale, 'features.signature.title')}</h3>
+      <p class="text-[14px] font-bold text-[#1d1d1f] dark:text-[#cccccc] leading-relaxed">
+        {t(locale, 'features.signature.description')}
+      </p>
+    </div>
+
+    <div class="flex flex-col gap-4 bg-white dark:bg-[#1c1c1e] p-8 rounded-3xl border border-[#e0e0e0] dark:border-[#2a2a2c] shadow-[0_4px_24px_rgba(0,0,0,0.04)] dark:shadow-none hover:shadow-[0_8px_32px_rgba(0,0,0,0.08)] transition-shadow">
+      <h3 class="text-[19px] font-semibold tracking-tight text-[#4f46e5] dark:text-[#6366f1]">{t(locale, 'features.privacy.title')}</h3>
+      <p class="text-[14px] font-bold text-[#1d1d1f] dark:text-[#cccccc] leading-relaxed">
+        {t(locale, 'features.privacy.description')}
+      </p>
+    </div>
+  </section>
+
+  <!-- Video Tutorial Section -->
+  <section class="max-w-5xl mx-auto px-6 py-16 border-t border-[#e0e0e0] dark:border-[#222222]">
+    <div class="text-center mb-10">
+      <h2 class="text-3xl font-black tracking-tight text-[#1d1d1f] dark:text-white mb-4">
+        {t(locale, 'video.title')}
+      </h2>
+      <p class="text-lg text-[#7a7a7a] dark:text-[#cccccc]">
+        {t(locale, 'video.subtitle')}
+      </p>
+    </div>
+    
+    <div class="relative w-full aspect-video bg-[#f5f5f7] dark:bg-[#1c1c1e] rounded-3xl overflow-hidden shadow-sm border border-[#e0e0e0] dark:border-[#2a2a2c] flex items-center justify-center transition-all hover:shadow-md group cursor-pointer" id="video-container">
+      <video 
+        id="tutorial-video"
+        src="https://www.w3schools.com/html/mov_bbb.mp4" 
+        poster="/tutorial.webp"
+        autoplay 
+        muted 
+        loop 
+        playsinline
+        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+      ></video>
+      
+      <!-- Play/Pause Overlay -->
+      <div id="video-overlay" class="absolute inset-0 bg-black/10 transition-colors duration-300 group-hover:bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100">
+        <div class="w-20 h-20 rounded-full bg-white/90 dark:bg-[#1d1d1f]/90 backdrop-blur-md shadow-[0_8px_30px_rgb(0,0,0,0.12)] flex items-center justify-center transform transition-all duration-300 group-hover:scale-110 group-hover:shadow-[0_8px_30px_rgb(0,0,0,0.2)]">
+          <svg id="play-icon" class="w-8 h-8 text-[#1d1d1f] dark:text-white ml-1 hidden" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="pause-icon" class="w-8 h-8 text-[#1d1d1f] dark:text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comments Section -->
+  <section class="max-w-3xl mx-auto px-6 py-16 border-t border-[#e0e0e0] dark:border-[#222222]">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-black tracking-tight text-[#1d1d1f] dark:text-white mb-4">
+        {t(locale, 'comments.title')}
+      </h2>
+      <p class="text-lg text-[#7a7a7a] dark:text-[#cccccc] max-w-2xl mx-auto">
+        {t(locale, 'comments.subtitle')}
+      </p>
+    </div>
+
+    <!-- Giscus Comments -->
+    <div class="bg-[#f5f5f7] dark:bg-[#1c1c1e] rounded-3xl p-8 mb-12 border border-[#e0e0e0] dark:border-[#2a2a2c] shadow-[0_4px_24px_rgba(0,0,0,0.04)] dark:shadow-none">
+      <script is:inline src="https://giscus.app/client.js"
+        data-repo="virender0298-sudo/imgmold"
+        data-repo-id="MDEwOlJlcG9zaXRvcnkxMjkyNDM3NjA3"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOTQkIZ84DAsnV"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang={locale}
+        crossorigin="anonymous"
+        async>
+      </script>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <FAQ limit={2} locale={locale} />
+</Layout>
+
+<script>
+  // Video player logic
+  const video = document.getElementById('tutorial-video') as HTMLVideoElement;
+  const container = document.getElementById('video-container');
+  const playIcon = document.getElementById('play-icon');
+  const pauseIcon = document.getElementById('pause-icon');
+
+  if (video && container && playIcon && pauseIcon) {
+    container.addEventListener('click', () => {
+      if (video.paused) {
+        video.play();
+        playIcon.classList.add('hidden');
+        pauseIcon.classList.remove('hidden');
+      } else {
+        video.pause();
+        playIcon.classList.remove('hidden');
+        pauseIcon.classList.add('hidden');
+      }
+    });
+
+    video.addEventListener('ended', () => {
+      playIcon.classList.remove('hidden');
+      pauseIcon.classList.add('hidden');
+    });
+  }
+
+  
+</script>

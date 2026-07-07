@@ -1,0 +1,64 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Contact Us - ImgMold.com Local Resizer",
+  "description": "Have questions, suggestions, or feedback about our local photo resizer utility? Get in touch with us."
+};
+---
+
+<Layout title="Contact Us - Secure Local Image Compressor" description="Get in touch with the team behind ImgMold.com. Send us your feedback or suggestions." jsonLd={jsonLd}>
+  <section class="max-w-xl mx-auto px-6 py-16">
+    <span class="text-xs uppercase tracking-widest text-[#7a7a7a] dark:text-[#cccccc] font-semibold">Get In Touch</span>
+    <h1 class="text-4xl font-extrabold tracking-tight text-[#1d1d1f] dark:text-white mt-1 mb-4">
+      Contact Us
+    </h1>
+    <p class="text-sm text-[#7a7a7a] dark:text-[#cccccc] mb-8 leading-relaxed">
+      Have questions, preset requests, or feedback about our browser compression engine? Drop us a line below. Since we do not run backend databases, all form submissions go directly to our support mailbox.
+    </p>
+    
+    <form class="flex flex-col gap-5" onsubmit="event.preventDefault(); alert('Thank you! Your feedback has been sent.');">
+      <div class="flex flex-col gap-1.5">
+        <label for="contactName" class="text-xs font-semibold text-[#7a7a7a] dark:text-[#cccccc] uppercase tracking-wider">Your Name</label>
+        <input 
+          id="contactName"
+          type="text" 
+          required
+          placeholder="Enter your name" 
+          class="px-4 py-3 bg-[#f5f5f7] dark:bg-[#272729] text-sm text-[#1d1d1f] dark:text-white rounded-xl border-none focus:ring-1 focus:ring-[#0066cc] outline-none font-medium"
+        />
+      </div>
+
+      <div class="flex flex-col gap-1.5">
+        <label for="contactEmail" class="text-xs font-semibold text-[#7a7a7a] dark:text-[#cccccc] uppercase tracking-wider">Email Address</label>
+        <input 
+          id="contactEmail"
+          type="email" 
+          required
+          placeholder="name@example.com" 
+          class="px-4 py-3 bg-[#f5f5f7] dark:bg-[#272729] text-sm text-[#1d1d1f] dark:text-white rounded-xl border-none focus:ring-1 focus:ring-[#0066cc] outline-none font-medium"
+        />
+      </div>
+
+      <div class="flex flex-col gap-1.5">
+        <label for="contactMsg" class="text-xs font-semibold text-[#7a7a7a] dark:text-[#cccccc] uppercase tracking-wider">Message</label>
+        <textarea 
+          id="contactMsg"
+          rows="5"
+          required
+          placeholder="How can we help you? Let us know if you want us to add a custom preset for a specific exam portal." 
+          class="px-4 py-3 bg-[#f5f5f7] dark:bg-[#272729] text-sm text-[#1d1d1f] dark:text-white rounded-xl border-none focus:ring-1 focus:ring-[#0066cc] outline-none font-medium resize-none"
+        ></textarea>
+      </div>
+
+      <button 
+        type="submit" 
+        class="w-full py-4 rounded-xl bg-[#0066cc] dark:bg-[#2997ff] text-white font-bold text-sm hover:opacity-95 shadow-md transition-opacity duration-200 cursor-pointer text-center"
+      >
+        Send Message
+      </button>
+    </form>
+  </section>
+</Layout>

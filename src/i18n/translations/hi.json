@@ -1,0 +1,49 @@
+{
+  "site.title": "IMGMOLD.COM - प्रीमियम लोकल फोटो कंप्रेसर और प्रीसेट रिसाइज़र",
+  "site.description": "UPSC, SSC और सरकारी परीक्षा फॉर्म के लिए पासपोर्ट फोटो, हस्ताक्षर और दस्तावेज़ फोटो को अपने ब्राउज़र में ही कंप्रेस और रिसाइज़ करें। 100% सुरक्षित।",
+
+  "nav.about": "हमारे बारे में",
+  "nav.privacy": "गोपनीयता",
+  "nav.terms": "शर्तें",
+  "nav.contact": "संपर्क",
+  "nav.language": "भाषा",
+
+  "hero.badge": "ImgMold",
+  "hero.title": "सटीक फोटो और दस्तावेज़ रिसाइज़र",
+  "hero.subtitle": "अपने ब्राउज़र में ही किसी भी फोटो, हस्ताक्षर या दस्तावेज़ को तुरंत रिसाइज़ और कंप्रेस करें। रोज़मर्रा के उपयोग, प्रोफेशनल अटैचमेंट और सरकारी परीक्षा फॉर्म के लिए बिल्कुल सही।",
+
+  "features.fileSize.title": "सटीक फ़ाइल साइज़ टारगेट",
+  "features.fileSize.description": "हमारा बाइनरी सर्च लूप एल्गोरिदम कैनवास क्वालिटी को रिकर्सिवली मॉड्यूलेट करता है ताकि आउटपुट फ़ाइलें आपके साइज़ बजट लिमिट (KB) के जितना करीब हो सके, बिना उससे ज़्यादा हुए।",
+  "features.fileSize.highlight": "साइज़ बजट लिमिट (KB)",
+
+  "features.signature.title": "हस्ताक्षर एन्हांसर",
+  "features.signature.description": "हस्ताक्षरों की पीली छाया वाली कैमरा तस्वीरों को शुद्ध ब्लैक-एंड-व्हाइट फ्लैटबेड-स्कैन्ड दस्तावेज़ गुणवत्ता में बदलें।",
+  "features.signature.highlight": "पीली छाया वाली",
+
+  "features.privacy.title": "EXIF प्राइवेसी शील्ड",
+  "features.privacy.description": "डाउनलोड से पहले आपकी तस्वीरों से Exif, कैमरा मेक, लेंस मेटाडेटा और GPS लोकेशन कोऑर्डिनेट्स अपने-आप हटा दिए जाते हैं, जिससे अधिकतम गोपनीयता सुनिश्चित होती है।",
+  "features.privacy.highlight": "अधिकतम गोपनीयता",
+
+  "video.title": "इसे काम करते देखें",
+  "video.subtitle": "अपने दस्तावेज़ों को सही से रिसाइज़ करने की 60-सेकंड की गाइड देखें।",
+
+  "comments.title": "समुदाय की टिप्पणियां",
+  "comments.subtitle": "हज़ारों छात्रों, पेशेवरों और यात्रियों से जुड़ें जो ImgMold पर भरोसा करते हैं।",
+  "comments.form.title": "रिव्यू लिखें",
+  "comments.form.name": "आपका नाम",
+  "comments.form.namePlaceholder": "जैसे माया शर्मा",
+  "comments.form.type": "आवेदन का प्रकार",
+  "comments.form.typePlaceholder": "जैसे UPSC अभ्यर्थी",
+  "comments.form.comment": "आपकी टिप्पणी",
+  "comments.form.commentPlaceholder": "ImgMold ने आपकी कैसे मदद की?",
+  "comments.form.submit": "रिव्यू सबमिट करें",
+  "comments.form.thankYou": "धन्यवाद!",
+  "comments.form.submitted": "आपका रिव्यू अनुमोदन के लिए सबमिट कर दिया गया है।",
+  "comments.form.writeAnother": "एक और लिखें",
+
+  "footer.rights": "सर्वाधिकार सुरक्षित।",
+  "footer.localProcessing": "हमारा टूल पूरी तरह से स्थानीय रूप से काम करता है। आपकी फोटो और हस्ताक्षर फ़ाइलें आपके ब्राउज़र कैश में प्रोसेस होती हैं और कभी हमारे सर्वर तक नहीं पहुंचतीं।",
+  "footer.privacyPolicy": "गोपनीयता नीति",
+  "footer.termsOfUse": "उपयोग की शर्तें",
+  "footer.contactUs": "संपर्क करें"
+}

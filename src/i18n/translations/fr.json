@@ -1,0 +1,49 @@
+{
+  "site.title": "IMGMOLD.COM - Compresseur photo local premium et redimensionneur",
+  "site.description": "Compressez et redimensionnez photos d'identité, signatures et documents directement dans votre navigateur. 100% sécurisé, aucun transfert de données.",
+
+  "nav.about": "À propos",
+  "nav.privacy": "Confidentialité",
+  "nav.terms": "Conditions",
+  "nav.contact": "Contact",
+  "nav.language": "Langue",
+
+  "hero.badge": "ImgMold",
+  "hero.title": "Redimensionneur précis de photos et documents",
+  "hero.subtitle": "Redimensionnez et compressez instantanément n'importe quelle photo, signature ou document directement dans votre navigateur. Parfait pour l'usage quotidien, les pièces jointes professionnelles et les formulaires officiels.",
+
+  "features.fileSize.title": "Taille de fichier précise",
+  "features.fileSize.description": "Notre algorithme de recherche binaire module la qualité du canevas de manière récursive pour générer des fichiers aussi proches que possible de votre LIMITE DE TAILLE (Ko) sans jamais la dépasser.",
+  "features.fileSize.highlight": "LIMITE DE TAILLE (Ko)",
+
+  "features.signature.title": "Améliorateur de signatures",
+  "features.signature.description": "Transformez les captures de caméra de signatures AVEC DES OMBRES JAUNES en documents noir et blanc de qualité scanner à plat.",
+  "features.signature.highlight": "AVEC DES OMBRES JAUNES",
+
+  "features.privacy.title": "Bouclier de confidentialité EXIF",
+  "features.privacy.description": "Les métadonnées Exif, appareil photo, objectif et coordonnées GPS sont automatiquement supprimées de vos photos avant le téléchargement, garantissant une CONFIDENTIALITÉ MAXIMALE.",
+  "features.privacy.highlight": "CONFIDENTIALITÉ MAXIMALE",
+
+  "video.title": "Voyez-le en action",
+  "video.subtitle": "Regardez notre guide rapide de 60 secondes pour redimensionner vos documents parfaitement.",
+
+  "comments.title": "Commentaires de la communauté",
+  "comments.subtitle": "Rejoignez des milliers d'étudiants, professionnels et voyageurs qui font confiance à ImgMold.",
+  "comments.form.title": "Laisser un avis",
+  "comments.form.name": "Votre nom",
+  "comments.form.namePlaceholder": "ex. Marie Dupont",
+  "comments.form.type": "Type de demande",
+  "comments.form.typePlaceholder": "ex. Demande de visa Schengen",
+  "comments.form.comment": "Votre commentaire",
+  "comments.form.commentPlaceholder": "Comment ImgMold vous a-t-il aidé?",
+  "comments.form.submit": "Soumettre l'avis",
+  "comments.form.thankYou": "Merci!",
+  "comments.form.submitted": "Votre avis a été soumis pour approbation.",
+  "comments.form.writeAnother": "En écrire un autre",
+
+  "footer.rights": "Tous droits réservés.",
+  "footer.localProcessing": "Notre outil fonctionne entièrement localement. Vos photos et fichiers de signature sont traités dans le cache de votre navigateur et n'atteignent jamais nos serveurs.",
+  "footer.privacyPolicy": "Politique de confidentialité",
+  "footer.termsOfUse": "Conditions d'utilisation",
+  "footer.contactUs": "Nous contacter"
+}
